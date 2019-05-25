@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>数据分析</title>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/highcharts.js"></script>
+  <script src="js/echarts.js"></script>
+  <script src="js/layui/layui.js"></script>
+  <script src="js/element_deps.js"></script>
+  
+  <script src="js/gray.js"></script>
+  <link rel="stylesheet" href="js/layui/css/layui.css"  media="all">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">流式数据分析</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item"><a href="console.html">控制台</a></li>
+        <li class="layui-nav-item"><a href="log.html">日志跟踪</a></li>
+        <li class="layui-nav-item"><a href="warning.html">异常监控</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="hot.html">全国访问热点图</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+  <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+          <li class="layui-nav-item layui-nav-itemed">
+            <a class="" href="javascript:;">实时行情走势</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:changeItem('InitQuotes','cu1910');">cu1910</a></dd>
+              <dd><a href="javascript:changeItem('InitQuotes','al1907');">al1907</a></dd>
+              <dd><a href="javascript:changeItem('InitQuotes','zn1909');">zn1909</a></dd>
+              <dd><a href="javascript:changeItem('InitQuotes','au1912');">au1912</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">每日成交概况</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:changeItem('InitTrade','cu1910');">cu1910</a></dd>
+              <dd><a href="javascript:changeItem('InitTrade','al1907');">al1907</a></dd>
+              <dd><a href="javascript:changeItem('InitTrade','zn1909');">zn1909</a></dd>
+              <dd><a href="javascript:changeItem('InitTrade','au1912');">au1912</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:">交易密度散点图</a>
+              <dl class="layui-nav-child">
+                <dd><a href="javascript:changeItem('Scatter','cu1910');">cu1910</a></dd>
+                <dd><a href="javascript:changeItem('Scatter','al1907');">al1907</a></dd>
+                <dd><a href="javascript:changeItem('Scatter','zn1909');">zn1909</a></dd>
+                <dd><a href="javascript:changeItem('Scatter','au1912');">au1912</a></dd>
+              </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div class="layui-col-md2">
+    </div>
+    <div id="main" style="width: 100%;height: 100%;" class="layui-col-md8">
+    </div>
+    <div class="layui-col-md2">
+    </div>
+  </div>
+  <div class="layui-footer">
+    © liaowuqianguadeyi@gmail.com - 流式数据分析
+  </div>
+</div>
+<script src="js/quotes.js"></script>
+</body>
+</html>
